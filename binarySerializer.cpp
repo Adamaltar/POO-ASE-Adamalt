@@ -106,9 +106,9 @@ int main(){
     MasinaSerializationTest m("Mercedes", "C-Class", 170,3,la);
     m.serialize("test.txt");
     MasinaSerializationTest m2;
-    cout<<m2;
+    cout<<"Inainte de deserializare: "<<endl<<m2;
     m2.deserialize("test.txt");
-    cout<<m2;
+    cout<<"Dupa deserializare: "<<endl<<m2;
 
 
 
