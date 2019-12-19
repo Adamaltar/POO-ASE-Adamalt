@@ -104,10 +104,10 @@ int main(){
 
     int* la=new int[3]{4,1,255};
     MasinaSerializationTest m("Mercedes", "C-Class", 170,3,la);
-    m.serialize("test.txt");
+    m.serialize("test.bin");
     MasinaSerializationTest m2;
     cout<<"Inainte de deserializare: "<<endl<<m2;
-    m2.deserialize("test.txt");
+    m2.deserialize("test.bin");
     cout<<"Dupa deserializare: "<<endl<<m2;
 
 
