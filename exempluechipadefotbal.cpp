@@ -201,9 +201,11 @@ string& getPlayer2(int i){
 // il vom discuta pe larg in urmatorul seminar
     
     EchipaDeFotbal(const EchipaDeFotbal& e):nume(e.nume),puncte(e.puncte),nrJucatori(e.nrJucatori){
+        if (e.lot!=NULL){
         this->lot=new string[this->nrJucatori];
-        for (size_t i = 0; i < this->nrJucatori; i++)
-            this->lot[i]=e.lot[i];
+            for (size_t i = 0; i < this->nrJucatori; i++)
+                this->lot[i]=e.lot[i];
+        }
         nrEchipe++;
     }
 
@@ -231,9 +233,11 @@ string& getPlayer2(int i){
         this->puncte=e.puncte;
         this->nrJucatori=e.nrJucatori;
         delete[] this->lot;
-        this->lot=new string[this->nrJucatori];
-        for (size_t i = 0; i < this->nrJucatori; i++)
-            this->lot[i]=e.lot[i];
+        if (e.lot!=NULL){
+            this->lot=new string[this->nrJucatori];
+            for (size_t i = 0; i < this->nrJucatori; i++)
+                this->lot[i]=e.lot[i];
+        }
 
         return *this;
 
